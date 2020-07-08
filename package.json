@@ -1,0 +1,35 @@
+{
+  "name": "dogbeaches",
+  "version": "1.0.0",
+  "description": "dog beach mapping ap",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javasmuse/dogbeaches.git"
+  },
+  "keywords": [
+    "map",
+    "dog",
+    "beach"
+  ],
+  "author": "Candace & Cookie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javasmuse/dogbeaches/issues"
+  },
+  "homepage": "https://github.com/javasmuse/dogbeaches#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.21",
+    "node-geocoder": "^3.27.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
