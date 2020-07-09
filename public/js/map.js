@@ -20,6 +20,7 @@ async function getBeaches() {
 				coordinates: [beach.location.coordinates[0], beach.location.coordinates[1]]
 			},
 			properties: {
+				beachName: beach.beachName,
 				beachId: beach.beachId,
 				icon: 'dog-park'
 
@@ -49,7 +50,7 @@ function loadMap(beaches) {
 			layout: {
 				'icon-image': '{icon}-15',
 				'icon-size': 1.5,
-				'text-field': '{beachId}',
+				'text-field': '{beachName}',
 				'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
 				'text-offset': [0, 0.9],
 				'text-anchor': 'top'

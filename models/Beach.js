@@ -10,6 +10,14 @@ const BeachSchema = new mongoose.Schema({
         maxlength: [10, 'Beach ID must be less than 10 characters']
     },
 
+    beachName: {
+        type: String,
+        required: [true, 'Please add beach name'],
+        unique: true,
+        trim: false,
+        maxlength: [30, 'Beach name cannot exceed 30 characters']
+    },
+
     address: {
         type: String,
         required: [true, 'Please add an address']

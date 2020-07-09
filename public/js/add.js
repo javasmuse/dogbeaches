@@ -1,5 +1,6 @@
 const beachForm = document.getElementById('beach-form');
 const beachId = document.getElementById('beach-id');
+const beachName = document.getElementById('beach-name')
 const beachAddress = document.getElementById('beach-address');
 
 // Send POST to API to add beach
@@ -12,6 +13,7 @@ async function addBeach(e) {
 
     const sendBody = {
         beachId: beachId.value,
+        beachName: beachName.value,
         address: beachAddress.value
     }
 
@@ -27,7 +29,7 @@ async function addBeach(e) {
         });
 
         if (res.status === 400) {
-            throw Error('Beach already exits!');
+            throw Error('Beach already exists!');
         }
 
         alert('Beach added!');
@@ -40,3 +42,5 @@ async function addBeach(e) {
 }
 
 beachForm.addEventListener('submit', addBeach);
+
+// todo: - add my portfolio's background, takeout bootstrap, add in flex-box, add in dogbeach photos, update current beache with names, add clickable on icon - to page of that beach with pics and reviews and nearby cool restaurants - allow updating and deleting - creative api integration for sunrise / sunset and tides ;) 
