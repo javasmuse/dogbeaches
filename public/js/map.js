@@ -57,28 +57,5 @@ function loadMap(beaches) {
 		});
 	});
 }
-// function loadMap(beaches) {
-// 	map.on('load', function () {
-// 		map.addlayer({
-// 			id: 'points',
-// 			type: 'symbol',
-// 			source: {
-// 				type: 'geojson',
-// 				data: {
-// 					type: 'FeatureCollection',
-// 					features: beaches,
-// 				},
-// 			},
-// 			layout: {
-// 				'icon-image': '{icon}-15',
-// 				'icon-size': 1.5,
-// 				'text-field': '{beachId}',
-// 				'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-// 				'text-offset': [0, 0.9],
-// 				'text-anchor': 'top'
-// 			}
-// 		});
-// 	});
-// }
 
 getBeaches();
