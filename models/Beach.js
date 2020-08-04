@@ -18,6 +18,18 @@ const BeachSchema = new mongoose.Schema({
         maxlength: [30, 'Beach name cannot exceed 30 characters']
     },
 
+    rating: {
+        type: Number,
+        required: false,
+    },
+
+    comments: {
+        type: String,
+        required: false,
+        trim: false,
+        maxlength: [400, 'Comment cannot exceed 400 characters - less is more :)']
+    },
+
     address: {
         type: String,
         required: [true, 'Please add an address']

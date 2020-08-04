@@ -3,9 +3,15 @@ mapboxgl.accessToken =
 const map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/mapbox/streets-v11',
-	zoom: 7,
-	center: [-82.4542633, 27.0997775]
+	zoom: 5.7,
+	center: [-83.5, 27.9]
 });
+
+// On hover - get name & paws rating
+// On click - get page w/ deats, tides, sunrise/set, comments, nearby dog friendly cafes 
+
+
+
 
 // Fetch beaches from API
 async function getBeaches() {
@@ -22,6 +28,8 @@ async function getBeaches() {
 			properties: {
 				beachName: beach.beachName,
 				beachId: beach.beachId,
+				rating: beach.rating,
+				comments: beach.comments,
 				icon: 'dog-park'
 
 			},
@@ -50,6 +58,7 @@ function loadMap(beaches) {
 			layout: {
 				'icon-image': '{icon}-15',
 				'icon-size': 1.5,
+
 				'text-field': '{beachName}',
 				'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
 				'text-offset': [0, 0.9],

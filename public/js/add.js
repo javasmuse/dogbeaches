@@ -2,6 +2,8 @@ const beachForm = document.getElementById('beach-form');
 const beachId = document.getElementById('beach-id');
 const beachName = document.getElementById('beach-name')
 const beachAddress = document.getElementById('beach-address');
+const rating = document.getElementById('rating');
+const comments = document.getElementById('comments');
 
 // Send POST to API to add beach
 async function addBeach(e) {
@@ -14,7 +16,9 @@ async function addBeach(e) {
     const sendBody = {
         beachId: beachId.value,
         beachName: beachName.value,
-        address: beachAddress.value
+        address: beachAddress.value,
+        rating: rating.value,
+        comments: comments.value
     }
 
     // usually uses axios instead of fetch - axios is a library
